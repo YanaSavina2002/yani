@@ -1,0 +1,12 @@
+def sort_list(lst):
+    """Функция, сортирующая список lst по возрастанию"""
+    for i in range(len(lst)):
+        for j in range(i, len(lst)):
+            if lst[i] > lst[j]:
+                lst[i], lst[j] = lst[j], lst[i]
+    return lst
+
+# Пример использования функции
+my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+sorted_list = sort_list(my_list)
+print(sorted_list)
