@@ -1,0 +1,17 @@
+def remove_text_in_brackets(text):
+    """Функция, удаляющая текст в круглых скобках из строки text"""
+    result = ""
+    is_inside_brackets = False
+    for char in text:
+        if char == "(":
+            is_inside_brackets = True
+        elif char == ")":
+            is_inside_brackets = False
+        elif not is_inside_brackets:
+            result += char
+    return result
+
+# Пример использования функции
+my_text = "Это (текст в скобках), который нужно (удалить)."
+new_text = remove_text_in_brackets(my_text)
+print(new_text)
